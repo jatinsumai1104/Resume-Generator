@@ -5,28 +5,37 @@
         Tip 2: you can also add an image using data-image tag
     -->
     <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-            Creative Tim
+        <a href="#" class="simple-text logo-normal">
+            Resume <i class="material-icons">favorite</i>
         </a>
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">
-            <li class="nav-item">
-                <a class="nav-link" href="UpdateDetails">
+            <li class="nav-item <?php if(!strcmp("update", $current_page))
+				echo 'active'; ?>">
+                <a class="nav-link" href="../../USER_DETAILS/fetchDetails/">
                     <i class="material-icons">dashboard</i>
                     <p>Update Your Details</p>
                 </a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="ResumePage">
+            <li class="nav-item <?php if(!strcmp("resume", $current_page))
+				echo 'active'; ?>">
+                <a class="nav-link" href="../../USER_DETAILS/fetchDetailsForResume/">
                     <i class="material-icons">person</i>
                     <p>Your Resume</p>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="ThemeSelector">
-                    <i class="material-icons">person</i>
+            <li class="nav-item <?php if(!strcmp("theme", $current_page))
+				echo 'active'; ?>">
+                <a class="nav-link" href="../../USERS/ThemeSelector/" name="theme">
+                    <i class="fa fa-briefcase"></i>
                     <p>Change Or Select Theme</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../LOGIN/logout">
+                    <i class="fa fa-sign-out-alt"></i>
+                    <p>Log-Out</p>
                 </a>
             </li>
         </ul>

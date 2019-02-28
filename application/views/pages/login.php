@@ -32,35 +32,46 @@
 		}
 		.card{
 			border-radius: 20px;
+			border-bottom-left-radius: 
+		}
+		.modal-dialog{
+			max-width: 450px!important;
+		}
+		.fa{
+			background-color: #111;
+			color: #fff;
+		}
+		.fa:hover{
+			background-color: #fff;
+			color: #9124A3;
 		}
 	</style>
 </head>
 
-<body class="" style="background-color: #000;">
+<body class="" style="background-color: #fff;">
 	<div class="content">
 		<div class="container-fluid">
-			<!--
+
 			<div class="row">
 				<div class="col-md-12">
-					<div class="caption v-middle text-center">
+					<div class="caption v-middl text-center">
 						<h1 class="cd-headline clip">
 							<span class="blc"></span>
-							<span class="cd-words-wrapper" style="height:150px;color:white;">
-								<b class="is-visible">Activo.</b>
-								<b>Asset Management.</b>
+							<span class="cd-words-wrapper" style="color:#111;">
+								<b class="is-visible">Resume.</b>
 							</span>
 						</h1>
 					</div>
 				</div>
 			</div>
--->
-			<div class="row justify-content-center" style="padding-top: 100px; border-radius: 50px;">
+
+			<div class="row justify-content-center" style="border-radius: 50px;">
 				<div class="col-md-8">
 					<div class="card-group">
 						<div class="card p-4">
-							<form action="index.php/Login/verify" method="post">
+							<form action="index.php/LOGIN/verify" method="post">
 								<div class="card-body">
-									<h1>Login</h1>
+									<h1>LOGIN</h1>
 									<p class="text-muted">Sign In to your account</p>
 									<div class="input-group mb-3">
 										<div class="input-group-prepend">
@@ -68,7 +79,7 @@
 												<i class="material-icons">face</i>
 											</span>
 										</div>
-										<input class="form-control" type="text" placeholder="Username" name="user_email">
+										<input class="form-control" type="text" placeholder="Username" name="username">
 									</div>
 									<div class="input-group mb-4">
 										<div class="input-group-prepend">
@@ -76,34 +87,104 @@
 												<i class="material-icons">lock</i>
 											</span>
 										</div>
-										<input class="form-control" type="password" placeholder="Password" name="user_password">
+										<input class="form-control" type="password" placeholder="Password" name="password">
 									</div>
 									<div class="custom-control custom-checkbox" style="margin-top:10px;">
 										<input type="checkbox" name="stay_signed_in" value="true" class="custom-control-input" id="customCheck1">
-										<label class="custom-control-label" for="customCheck1">Stay Signed In</label>
+										<label class="custom-control-label" for="customCheck1" name="stay_signed_in">Stay Signed In</label>
 									</div>
 									<div class="row">
 										<div class="col-4">
-											<button class="btn  px-4" type="submit" name="login" style="background-color: #000;">Login</button>
+											<button class="btn  px-4 btn-round" type="submit" name="login" style="background-color: #000;">Login</button>
 										</div>
 										<div class="col-4 text-left">
-											<button class="btn btn-danger px-4" name="skip">Skip Sign In...</button>
+											<button class="btn btn-danger px-4 btn-round" name="skip_sign_in">Skip Sign In...</button>
 										</div>
-										<div class="col-4 text-left" disabled>
-											<button class="btn btn-light px-4" name="forget" disabled>Forgot password?</button>
-										</div>
+
 									</div>
+
 								</div>
 							</form>
 						</div>
-						<div class="card text-white  py-5 d-md-down-none" style="width:44%; background: url('assets/img/cover.jpg') no-repeat;background-size: cover;" >
-							<img src="assets/img/logo/logo2.jpg" alt="Logo" width="100px" style="border-radius: 25px;position:relative;bottom:0;right:0;">
+						<div class="card text-white  py-5 d-md-down-none" style="width:44%; background: url('assets/img/cover.jpg') no-repeat;background-size: cover;">
+							<button class="btn px-4 btn-round" name="registration" data-toggle="modal" data-target="#mysignupmodal" style="position:absolute;bottom: 10%;right: 25px;background-color: #fff;border: solid 2px #111;color: #47A44B;font-weight: 500;">Sign-Up Now!! (or you will me some cool stuff)</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<!--	SIGN_UP MODAL-->
+	<div class="modal fade" id="mysignupmodal" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-signup" role="document">
+			<div class="modal-content">
+				<div class="card card-signup card-plain">
+					<div class="modal-header">
+						<h5 class="modal-title card-title">Register</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<i class="material-icons">clear</i>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12 mr-auto">
+								<div class="social text-center">
+									<a href="https://twitter.com/signup" class="btn btn-just-icon btn-round btn-twitter">
+										<i class="fa fa-twitter"></i>
+									</a>
+									<a href="https://accounts.google.com/signin/oauth/oauthchooseaccount?client_id=178585172569-h0b7k6fb40vmidn7odcgmrnlln8apkcq.apps.googleusercontent.com&as=dORMUUs6rbgPX6dZIQ12WQ&destination=https%3A%2F%2Fwordtohtml.net&approval_state=!ChR0S2tkSWNBN25sQTJLQkRNNDA5LRIfdzl0bnZvZVhMRkViOEhuU1JuY2dubW9lTVhjOFp4WQ%E2%88%99ANKMe1QAAAAAW8TYhp3NLym0MIPZ0Z6_r-F2FcwDfo6s&oauthgdpr=1&xsrfsig=AHgIfE-ruab-BLvEputFaxzTBE0_w2ziVg&flowName=GeneralOAuthFlow" class="btn btn-just-icon btn-round btn-google">
+										<i class="fa fa-google"></i>
+									</a>
+									<a href="https://en-gb.facebook.com/" class="btn btn-just-icon btn-round btn-facebook">
+										<i class="fa fa-facebook"> </i>
+									</a>
+									<h4> or be classical </h4>
+								</div>
+
+								<form class="form" method="POST" action="index.php/LOGIN/registerUser">
+									<div class="card-body">
+										<div class="form-group">
+											<div class="input-group">
+												<div class="input-group-prepend">
+													<div class="input-group-text"><i class="material-icons">email</i></div>
+												</div>
+												<input type="text" class="form-control" placeholder="Email..." name="signup_username">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<div class="input-group">
+												<div class="input-group-prepend">
+													<div class="input-group-text"><i class="material-icons">lock_outline</i></div>
+												</div>
+												<input type="password" placeholder="Password..." class="form-control" name="signup_password" />
+											</div>
+										</div>
+
+										<div class="form-check">
+											<label class="form-check-label">
+												<input class="form-check-input" type="checkbox" value="" checked>
+												<span class="form-check-sign">
+													<span class="check"></span>
+												</span>
+												I agree to the <a href="#something">terms and conditions</a>.
+											</label>
+										</div>
+									</div>
+									<div class="modal-footer justify-content-center">
+										<button class="btn btn-primary btn-round" name="sign_up">Sign Up</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 	<!--   Core JS Files   -->
 	<script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
 	<script src="assets/js/core/popper.min.js" type="text/javascript"></script>
@@ -123,7 +204,7 @@
 	<!-- Material Dashboard DEMO methods, don't include it in your project! -->
 	<script src="assets/demo/demo.js"></script>
 	<script src="assets/js/custom.js"></script>
-	<script src="assets/plugins/text-heading/Animated-Type-Heading.js"></script>
+	<!--	<script src="assets/plugins/text-heading/Animated-Type-Heading.js"></script>-->
 	<script>
 		$(document).ready(function() {
 			// Javascript method's body can be found in assets/js/demos.js

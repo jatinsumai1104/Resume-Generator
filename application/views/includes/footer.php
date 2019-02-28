@@ -15,11 +15,13 @@
 <script src="../../assets/js/plugins/bootstrap-notify.js"></script>
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="../../assets/js/material-dashboard.min.js?v=2.1.0" type="text/javascript"></script>
+<script src="../../assets/plugins/jquery-easing/jquery.easing.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/resume/resume.min.js" type="text/javascript"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="../../assets/demo/demo.js"></script>
 <script src="../../assets/js/custom.js"></script>
 <script src="../../assets/js/project.js"></script>
-<script src="../../assets/js/achievement.js"></script>
+<script src="../../assets/js/experience.js"></script>
 
 <script>
     $(document).ready(function() {
